@@ -2,11 +2,11 @@
 import { type Ref, ref } from 'vue';
 import ButtonDecorative from '@/components/ButtonDecorative.vue';
 
-const galleryHeader: Ref<HTMLElement | null> = ref(null);
+const gallerySection: Ref<HTMLElement | null> = ref(null);
 
 const scrollToGallery = () => {
-	if (galleryHeader.value) {
-		galleryHeader.value.scrollIntoView({
+	if (gallerySection.value) {
+		gallerySection.value.scrollIntoView({
 			behavior: 'smooth',
 			block: 'start',
 			inline: 'nearest',
@@ -43,8 +43,8 @@ const scrollToGallery = () => {
 				<ButtonDecorative label="Explore!" @click="scrollToGallery" />
 			</div>
 		</div>
-		<div class="gallery">
-			<h2 ref="galleryHeader">Gallery</h2>
+		<div class="gallery" ref="gallerySection">
+			<h2>Gallery</h2>
 			<div>
 				<p>Under construction!</p>
 			</div>
