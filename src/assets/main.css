@@ -1,4 +1,4 @@
-@import "base.css";
+@import 'base.css';
 body {
 	background-color: var(--background);
 	color: var(--text-off);
