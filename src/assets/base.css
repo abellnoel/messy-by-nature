@@ -1,5 +1,6 @@
 ﻿:root {
-	--text: #9c9c8e;
+	--text: #d3d3d3;
+	--text-off: #9c9c8e;
 	--background: #25221f;
 	--background-dark: color-mix(in srgb,var(--background),#000 45%);
 	--background-light: color-mix(in srgb,var(--background),#fff 5%);

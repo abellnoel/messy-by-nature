@@ -61,7 +61,7 @@ const scrollToGallery = () => {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding: 4rem;
+		padding: 4rem 0;
 
 		.hero-content {
 			display: flex;
@@ -79,7 +79,7 @@ const scrollToGallery = () => {
 				background-repeat: no-repeat;
 				background-size: 100%;
 
-				color: var(--text);
+				color: var(--text-off);
 				text-align: center;
 				font-size: 2rem;
 
@@ -101,13 +101,13 @@ const scrollToGallery = () => {
 			}
 		}
 
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 768px) {
 			.hero-content {
 				flex-direction: column;
 
 				.info {
-					margin-left: 2rem;
-					margin-top: 2rem;
+					margin: 2rem 2rem 0 2rem;
+					max-width: 25rem;
 				}
 			}
 		}
@@ -121,7 +121,7 @@ const scrollToGallery = () => {
 	}
 
 	.gallery {
-		text-align: center;
+		padding: 4rem;
 		background-color: var(--background-light);
 		height: 80rem;
 	}

@@ -11,7 +11,7 @@ button {
 	background-color: transparent;
 	border: 1px solid #837e76;
 	box-sizing: border-box;
-	color: var(--text);
+	color: var(--text-off);
 	font-size: 1rem;
 	font-weight: bold;
 	line-height: 1.5rem;

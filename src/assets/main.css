@@ -1,7 +1,7 @@
 @import "base.css";
 body {
 	background-color: var(--background);
-	color: var(--text);
+	color: var(--text-off);
 	font-family: 'Impact ', sans-serif;
 	margin: 0;
 }
@@ -11,7 +11,7 @@ h1 {
 }
 
 p {
-	color: #d3d3d3;
+	color: var(--text);
 }
 
 a {
