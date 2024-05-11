@@ -1,10 +1,129 @@
 <script setup lang="ts">
+import { type Ref, ref } from 'vue';
+import ButtonDecorative from '@/components/ButtonDecorative.vue';
+
+const galleryHeader: Ref<HTMLElement | null> = ref(null);
+
+const scrollToGallery = () => {
+	if (galleryHeader.value) {
+		galleryHeader.value.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest',
+		});
+	}
+};
 </script>
 
 <template>
-	<h1>Home</h1>
-	<p>Home home home</p>
+	<div class="home-container">
+		<div class="hero-banner">
+			<div class="hero-content">
+				<div class="brand">
+					<h1>Messy by Nature</h1>
+				</div>
+				<div class="info">
+					<h2>Welcome!</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim
+						id est laborum.
+					</p>
+					<p>
+						Ut enim ad minim veniam, quis nostrud exercitation
+						ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate
+						velit esse cillum dolore eu fugiat nulla pariatur.
+					</p>
+				</div>
+			</div>
+			<div class="hero-actions">
+				<ButtonDecorative label="Explore!" @click="scrollToGallery" />
+			</div>
+		</div>
+		<div class="gallery">
+			<h2 ref="galleryHeader">Gallery</h2>
+			<div>
+				<p>Under construction!</p>
+			</div>
+		</div>
+	</div>
 </template>
 
 <style>
+.home-container {
+	display: flex;
+	flex-direction: column;
+
+	.hero-banner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 4rem;
+
+		.hero-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.brand {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				aspect-ratio: 1 / 1;
+				border-radius: 100%;
+				background-image: url('@/assets/banner-background.jpg');
+				background-repeat: no-repeat;
+				background-size: 100%;
+
+				color: var(--text);
+				text-align: center;
+				font-size: 2rem;
+
+				h1 {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					background-color: var(--secondary);
+					border-radius: 25%;
+					height: 4rem;
+					width: 20rem;
+				}
+			}
+
+			.info {
+				max-width: 20rem;
+				margin-left: 4rem;
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			.hero-content {
+				flex-direction: column;
+
+				.info {
+					margin-left: 2rem;
+					margin-top: 2rem;
+				}
+			}
+		}
+
+		.hero-actions {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2rem;
+		}
+	}
+
+	.gallery {
+		text-align: center;
+		background-color: var(--background-light);
+		height: 80rem;
+	}
+}
 </style>

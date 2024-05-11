@@ -1,0 +1,9 @@
+﻿:root {
+	--text: #9c9c8e;
+	--background: #25221f;
+	--background-dark: color-mix(in srgb,var(--background),#000 45%);
+	--background-light: color-mix(in srgb,var(--background),#fff 5%);
+	--primary: #486048;
+	--secondary: #293e37;
+	--accent: #729773;
+}
