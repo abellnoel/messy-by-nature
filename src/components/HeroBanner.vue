@@ -50,7 +50,6 @@ import ButtonDecorative from '@/components/ButtonDecorative.vue';
 
 	color: var(--text-off);
 	text-align: center;
-	font-size: 2rem;
 
 	h1 {
 		background-color: var(--secondary);
